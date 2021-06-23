@@ -14,14 +14,24 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "story-composer": {
+      "tags": []
+    },
+    "story-composer-e2e": {
+      "tags": [],
+      "implicitDependencies": ["story-composer"]
+    },
+    "story-player": {
+      "tags": []
+    },
+    "story-player-e2e": {
+      "tags": [],
+      "implicitDependencies": ["story-player"]
+    }
+  }
 }
